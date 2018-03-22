@@ -45,7 +45,7 @@ function [results] = address_checker(city_name,key)
 
                 end;
 
-                    results{x,4} = GoogleAPI_data.results.geometry.location.lng; %get latitude and longitude
+                    results{x,4} = GoogleAPI_data.results.geometry.location.lat; %get latitude and longitude
                     results{x,5} = GoogleAPI_data.results.geometry.location.lng;
             else
                 
