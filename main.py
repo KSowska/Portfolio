@@ -290,12 +290,12 @@ class DatabaseManagement:
 
 
 if __name__ == '__main__':
-    #
-    # THIS IS A WIP SCRIPT USED TO MOVE INDIVUAL DATA FROM INDIVIDUAL FILES
+  
+    # THIS IS A WIP SCRIPT USED TO MOVE DATA FROM INDIVIDUAL FILES
     # TO A POSTRES DATABASE IN THE CLOUD
     # data is on disk; few 100k files; each file represents a song
 
-    paths = [i.path for idx, i in enumerate(scandir(r'/Users/kevinsowska/PycharmProjects/trading/data')) if idx < 50000]
+    paths = [i.path for idx, i in enumerate(scandir(r'/Users/********/PycharmProjects/udacity/data')) if idx < 500000]
 
     # data_for_upload = DataModel(paths, 'json', **{'typ': 'series'})
 
@@ -307,8 +307,8 @@ if __name__ == '__main__':
     # Initializing the DatabaseNanagement class
     # db is hosted in by AWS RDS
 
-    db = DatabaseManagement('kevinsowska', 'password',
-                           'postgresql', 'mytestdb.cvrvhtkqtojs.us-east-2.rds.amazonaws.com',
+    db = DatabaseManagement('********', '********',
+                           'postgresql', '*******.cvrvhtkqtojs.us-east-2.rds.amazonaws.com',
                            5432, 'postgres')
 
     # COPY 50K RECORDS IN DB IN 5s
